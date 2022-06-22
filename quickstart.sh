@@ -8,3 +8,6 @@ sudo apt install --install-recommends gnome-software gnome-software-plugin-flatp
 sudo apt purge --auto-remove unattended-upgrades snapd gnome-software-plugin-snap -y
 xdg-user-dirs-update
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+mkdir ~/.config
+cp -r config/* ~/.config
+cp .gtkrc-2.0 ~/
