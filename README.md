@@ -1,0 +1,2 @@
+# XQSS
+XFCE QuickStart Script
