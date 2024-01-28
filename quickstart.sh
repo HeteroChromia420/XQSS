@@ -12,7 +12,7 @@ updateSystem(){
 }
 
 installPackages(){
-    sudo apt install qt5ct xfce4-terminal lightdm lightdm-gtk-greeter-settings eject bash-completion gvfs* qt5-gtk2-platformtheme network-manager network-manager-gnome xfce4-screenshooter xinit pipewire pipewire-pulse wireplumber alsa-utils file-roller xserver-xorg xdg-user-dirs wpasupplicant fonts-noto* arc-theme papirus-icon-theme breeze-cursor-theme flatpak desktop-base xfce4 mousepad ristretto pavucontrol xfce4-panel xfce4-whiskermenu-plugin xfce4-pulseaudio-plugin xfce4-taskmanager xfce4-notifyd xfwm4 galculator package-update-indicator falkon --no-install-recommends --no-install-suggests -y | tee -a xqss-setup.log
+    sudo apt install qt5ct xfce4-terminal lightdm lightdm-gtk-greeter-settings eject bash-completion gvfs* qt5-gtk2-platformtheme network-manager network-manager-gnome xfce4-screenshooter xinit pulseaudio alsa-utils engrampa xserver-xorg xdg-user-dirs wpasupplicant fonts-noto* arc-theme papirus-icon-theme breeze-cursor-theme flatpak desktop-base xfce4 mousepad ristretto pavucontrol xfce4-panel xfce4-whiskermenu-plugin xfce4-pulseaudio-plugin xfce4-taskmanager xfce4-notifyd xfwm4 galculator package-update-indicator falkon tumbler --no-install-recommends --no-install-suggests -y | tee -a xqss-setup.log
     sudo apt install --install-recommends plasma-discover plasma-discover-backend-flatpak -y | tee -a xqss-setup.log
     xdg-user-dirs-update | tee -a xqss-setup.log
     #And purge unwanted packages
