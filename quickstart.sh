@@ -1,14 +1,10 @@
 #!/bin/bash
 
-clearScreen(){
-    clear
-}
-
 updateSystem(){
     sudo apt update | tee -a xqss-setup.log
     #Perhaps you meant to do this?
     sudo apt upgrade -y | tee -a xqss-setup.log
-    clearScreen
+    clear
 }
 
 installPackages(){
@@ -17,17 +13,19 @@ installPackages(){
     xdg-user-dirs-update | tee -a xqss-setup.log
     #And purge unwanted packages
     sudo apt purge --auto-remove unattended-upgrades snapd plasma-discover-backend-snap -y | tee -a xqss-setup.log
-    clearScreen
+    clear
 }
 
 setupFlatpak(){
     flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo | tee -a xqss-setup.log
-    clearScreen
+    clear
 }
 
 setupMisc(){
     mkdir ~/.config
     cp -r config/* ~/.config
+    sudo cp -r shared /home/ | tee -a obqss-setup.log
+    sudo chmod a+rwx -R /home/shared
 }
 
 updateSystem && installPackages && setupFlatpak && setupMisc 
