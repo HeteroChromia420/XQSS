@@ -14,7 +14,7 @@ updateSystem(){
 
 installPackages(){
     echo "[$(timestamp)] Installing packages..." | tee -a "$log_file"
-    sudo apt install --no-install-recommends --no-install-suggests synaptic policykit-1 libnotify-bin xdg-desktop-portal xdg-desktop-portal-gtk xfce4-power-manager-plugins qt5ct xfce4-terminal lightdm lightdm-gtk-greeter-settings eject bash-completion gvfs* qt5-gtk2-platformtheme network-manager network-manager-gnome xfce4-screenshooter xinit pulseaudio alsa-utils engrampa xserver-xorg xdg-user-dirs wpasupplicant fonts-noto* arc-theme papirus-icon-theme breeze-cursor-theme flatpak desktop-base xfce4 mousepad ristretto pavucontrol xfce4-panel xfce4-whiskermenu-plugin xfce4-pulseaudio-plugin xfce4-taskmanager xfce4-notifyd xfwm4 galculator package-update-indicator falkon tumbler
+    sudo apt install --no-install-recommends --no-install-suggests gnome-disk-utility synaptic policykit-1 libnotify-bin xdg-desktop-portal xdg-desktop-portal-gtk xfce4-power-manager-plugins qt5ct xfce4-terminal lightdm lightdm-gtk-greeter-settings eject bash-completion gvfs* qt5-gtk2-platformtheme network-manager network-manager-gnome xfce4-screenshooter xinit pulseaudio alsa-utils engrampa xserver-xorg xdg-user-dirs wpasupplicant fonts-noto* arc-theme papirus-icon-theme breeze-cursor-theme flatpak desktop-base xfce4 mousepad ristretto pavucontrol xfce4-panel xfce4-whiskermenu-plugin xfce4-pulseaudio-plugin xfce4-taskmanager xfce4-notifyd xfwm4 galculator package-update-indicator falkon tumbler
     #Installing Plasma-Discover instead of GNOME Software because GNOME Software sucks.
     sudo apt install --install-recommends plasma-discover plasma-discover-backend-flatpak
     xdg-user-dirs-update
